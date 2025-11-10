@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Probability and Stats: Midterm 2</title>
+        <meta charset ="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+    <body>
+        <div class="progress-bar" id="progressBar"></div>
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/expectation.html">Expectation & Variance</a></li>
+                    <li><a href="pages/joint-distribution.html">Joint Distributions</a></li>
+                    <li><a href="pages/poisson.html">Poisson Processes</a></li>
+                    <li><a href="pages/clt.html">CLT & LLN</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <header class="hero">
+            <h1>Probability and Stats: Midterm 2</h1>
+            
+            <div class="hero-content">
+                <h2>Exam 2</h2>
+                <details class="dropdown-menu">
+                    <summary>Key details about this upcoming exam on Thursday (11/13)</summary>
+                    <ul>
+                        <li>Closed-book and closed-notes</li>
+                        <li>Calculator not allowed</li>
+                        <li>Cheat sheet: Double-sided, A4</li>
+                        <li>Range:
+                            <ul>
+                                <li>Lectures 5-8</li>
+                                <li>Homeworks 4-7</li>
+                            </ul>
+                        </li>
+                        <li>Other details
+                            <ul>
+                                <li>Questions resemble those in homework</li>
+                                <li>Homework + Lectures = best way to prepare</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </details>
+            </div>
+            
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <div class="scroll-arrow">
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <h2>Topics / Checklist</h2>
+            <section class="chapter" id="chapter-5" data-aos="fade-up">
+                <h3>Chapter 5: Expectation, Variance and High-Order Moments</h3>
+                <form>
+                    <fieldset>
+                        <legend>Topics</legend>
+                        <div>
+                            <input type="checkbox" id="expectation" name="expectation">
+                            <label for="expectation">Expectation</label><br>
+                                <ul>
+                                    <li>Define and compute expectation for discrete and continuous RVs</li>
+                                    <li>Apply linearity of expectation to change-of-variables</li>
+
+                                </ul>
+                            <input type="checkbox" id="variance" name="variance">
+                            <label for="variance">Variance</label><br>
+                                <ul>
+                                    <li>Define variance, derive V(X) = E[X^2] - (E[X])^2</li>
+                                    <li>Examples: Geometric, exponential, normal</li>
+                                </ul>
+                            <input type="checkbox" id="moments" name="moments">
+                            <label for="moments">High-Order Moments</label><br>
+                                <ul>
+                                    <li>Introduce higher-order moments: central moments, skewness, kurtosis</li>
+                                </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset class="task-list">
+                        <legend>Task list</legend>
+                        <div>
+                            <input type="checkbox" id="textbook5" name="textbook5">
+                            <label for="textbook5">Read textbook pages</label><br>
+                            <input type="checkbox" id="slides5" name="slides5">
+                            <label for="slides5">Review lecture slides</label><br>
+                            <input type="checkbox" id="quiz4" name="quiz4">
+                            <label for="quiz4">Review Quiz 4</label><br>
+                            <input type="checkbox" id="hw5" name="hw5">
+                            <label for="hw5">Review Homework 5</label><br>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Complete</button>
+                </form>
+            </section>
+            <section class="chapter" id="chapter-6" data-aos="fade-up">
+                <h3>Chapter 6: Joint Distributions Covariance, and Correlation</h3>
+                <form> 
+                    <fieldset>
+                        <legend>Topics</legend>
+                        <div>
+                            <input type="checkbox" id="joint_distributions" name="joint_distributions">
+                            <label for="joint_distributions">Joint Distributions</label><br>
+                                <ul>
+                                    <li>Define joint PMF</li>
+                                    <li>Define marginals from joint PMF</li>
+                                    <li>Conditional PMF</li>
+                                    <li>Joint CDF</li>
+                                    <li>Independence</li>
+                                </ul>
+                            <input type="checkbox" id="covariance" name="covariance">
+                            <label for="covariance">Covariance</label><br>
+                                <ul>
+                                    <li>Define covariance</li>
+                                    <li>Uncorrelated R.V.'s</li>
+                                    <li>Theorem (Variance-of-sum rule)</li>
+                                </ul>
+                            <input type="checkbox" id="correlation" name="correlation">
+                            <label for="correlation">Correlation</label><br>
+                                <ul>
+                                    <li>Define correlation coefficient</li>
+                                </ul>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="task-list">
+                        <legend>Task list</legend>
+                        <div>
+                            <input type="checkbox" id="textbook6" name="textbook6">
+                            <label for="textbook6">Read textbook pages</label><br>
+                            <input type="checkbox" id="slides6" name="slides6">
+                            <label for="slides6">Review lecture slides</label><br>
+                            <input type="checkbox" id="quiz5" name="quiz5">
+                            <label for="quiz5">Review Quiz 5</label><br>
+                            <input type="checkbox" id="hw6" name="hw6">
+                            <label for="hw6">Review Homework 6</label><br>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Complete</button>
+                </form>
+            </section>
+
+            <section class="chapter" id="chapter-7" data-aos="fade-up">
+                <h3>Chapter 7: Poisson Processes</h3>
+                <form>
+                    <fieldset>
+                        <legend>Topics</legend>
+                        <div>
+                            <input type="checkbox" id="poisson_processes" name="poisson_processes">
+                            <label for="poisson_processes">Poisson Processes</label><br>
+                                <ul>
+                                    <li>Motivation</li>
+                                    <li>Poisson law at infinitessimal time scale</li>
+                                    <li>Poisson process</li>
+                                    <li>Exponential law in Poisson process</li>
+                                    <li>Gamma distribution from sum of independent exponentials</li>
+                                </ul>
+                        </div>
+
+                    </fieldset>
+                    <fieldset class="task-list">
+                        <legend>Task list</legend>
+                        <div>
+                            <input type="checkbox" id="textbook7" name="textbook7">
+                            <label for="textbook7">Read textbook pages</label><br>
+                            <input type="checkbox" id="slides7" name="slides7">
+                            <label for="slides7">Review lecture slides</label><br>
+                            <input type="checkbox" id="quiz6" name="quiz6">
+                            <label for="quiz6">Review Quiz 6</label><br>
+                            <input type="checkbox" id="hw7" name="hw7">
+                            <label for="hw7">Review Homework 7</label><br>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Complete</button>
+                </form>
+            </section>
+
+            <section class="chapter" id="chapter-8" data-aos="fade-up">
+                <h3>Chapter 8: Law of Large Numbers and Central Limit Theorem</h3>
+                <form>
+                    <fieldset>
+                        <legend>Topics</legend>
+                        <div>
+                            <input type="checkbox" id="lln" name="lln">
+                        <label for="lln">Law of Large Numbers</label><br>
+                            <ul>
+                                <li>Convergence in probability</li>
+                                <li>Theorem: Markov's inequality</li>
+                                <li>Theorem: Chebyshev's inequality</li>
+                                <li>Theorem: Weak law of large numbers</li>
+                                <li>Theorem: Strong law of large numbers</li>
+                            </ul>
+                        <input type="checkbox" id="clt" name="clt">
+                        <label for="clt">Central Limit Theorem</label><br>
+                            <ul>
+                                <li>Definition: Convergence in distribution / Weak convergence</li>
+                                <li>Definition: Standardized Average</li>
+                                <li>Theorem: Central Limit Theorem</li>
+                                </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset class="task-list">
+                        <legend>Task list</legend>
+                        <div>
+                            <input type="checkbox" id="textbook8" name="textbook8">
+                            <label for="textbook8">Read textbook pages</label><br>
+                            <input type="checkbox" id="slides8" name="slides8">
+                            <label for="slides8">Review lecture slides</label><br>
+                            <input type="checkbox" id="quiz7" name="quiz7">
+                            <label for="quiz7">Review Quiz 7</label><br>
+                            <input type="checkbox" id="hw8" name="hw8">
+                            <label for="hw8">Review Homework 8</label><br>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Complete</button>
+                </form>
+            </section>
+
+            <section class="chapter" id="chapter-9" data-aos="fade-up">
+                <h3>Cheatsheet</h3>
+                <form>
+                    <fieldset>
+                        <legend>Topics</legend>
+                        <div>
+                            <input type="checkbox" id="cheatsheet_expectation" name="cheatsheet_expectation">
+                            <label for="cheatsheet_expectation">Expectation</label><br>
+                            <input type="checkbox" id="cheatsheet_variance" name="cheatsheet_variance">
+                            <label for="cheatsheet_variance">Variance</label><br>
+                            <input type="checkbox" id="cheatsheet_moments" name="cheatsheet_moments">
+                            <label for="cheatsheet_moments">High-Order Moments</label><br>
+                            <input type="checkbox" id="cheatsheet_joint_distributions" name="cheatsheet_joint_distributions">
+                            <label for="cheatsheet_joint_distributions">Joint Distributions</label><br>
+                            <input type="checkbox" id="cheatsheet_covariance" name="cheatsheet_covariance">
+                            <label for="cheatsheet_covariance">Covariance</label><br>
+                            <input type="checkbox" id="cheatsheet_correlation" name="cheatsheet_correlation">
+                            <label for="cheatsheet_correlation">Correlation</label><br>
+                            <input type="checkbox" id="cheatsheet_poisson" name="cheatsheet_poisson">
+                            <label for="cheatsheet_poisson">Poisson Processes</label><br>
+                            <input type="checkbox" id="cheatsheet_lln" name="cheatsheet_lln">
+                            <label for="cheatsheet_lln">Law of Large Numbers</label><br>
+                            <input type="checkbox" id="cheatsheet_clt" name="cheatsheet_clt">
+                            <label for="cheatsheet_clt">Central Limit Theorem</label><br>
+                        </div>
+                    </fieldset>
+                    <fieldset class="task-list">
+                        <legend>Task list</legend>
+                        <div>
+                            <input type="checkbox" id="create_cheatsheet" name="create_cheatsheet">
+                            <label for="create_cheatsheet">Create a cheatsheet</label><br>
+                        </div>
+                    </fieldset>
+                    <button type="submit">Complete</button>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <p>&copy; 2025 Nathan Liu. All rights reserved.</p>
+        </footer>
+        
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
