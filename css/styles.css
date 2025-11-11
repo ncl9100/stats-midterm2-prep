@@ -203,6 +203,13 @@ body {
     pointer-events: none;
 }
 
+/* Hide scroll indicator on mobile */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        display: none;
+    }
+}
+
 .mouse {
     width: 26px;
     height: 40px;
