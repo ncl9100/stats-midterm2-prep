@@ -40,6 +40,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+// ==================== DROPDOWN MENU - SCROLL INDICATOR TOGGLE ====================
+
+// Hide scroll indicator when dropdown menu is open
+document.addEventListener('DOMContentLoaded', () => {
+    const dropdownMenu = document.querySelector('.dropdown-menu');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+
+    if (dropdownMenu && scrollIndicator) {
+        // Check initial state and set accordingly
+        if (dropdownMenu.open) {
+            scrollIndicator.classList.add('hidden');
+        }
+
+        // Listen for toggle events
+        dropdownMenu.addEventListener('toggle', (e) => {
+            // If dropdown is open, hide scroll indicator; otherwise show it
+            if (dropdownMenu.open) {
+                scrollIndicator.classList.add('hidden');
+            } else {
+                scrollIndicator.classList.remove('hidden');
+            }
+        });
+    }
+});
+
 // ==================== LOCAL STORAGE FEATURE ====================
 
 // Save checkbox state to localStorage
@@ -207,3 +232,55 @@ document.querySelectorAll('form').forEach(form => {
         // this.reset();
     });
 });
+
+// ==================== COUNTDOWN TIMER ====================
+
+// Countdown timer for exam date: Thursday 11/13 3:30 PM EST
+function initCountdownTimer() {
+    const countdownTimer = document.getElementById('countdownTimer');
+    if (!countdownTimer) return; // Exit if countdown timer doesn't exist on this page
+    
+    // Target date: November 13, 2025 at 3:30 PM EST
+    // EST is UTC-5, so we create the date in EST timezone
+    // Format: "2025-11-13T15:30:00-05:00" (3:30 PM = 15:30 in 24-hour format)
+    const targetDate = new Date('2025-11-13T15:30:00-05:00');
+    
+    // Get countdown elements
+    const daysElement = document.getElementById('days');
+    const hoursElement = document.getElementById('hours');
+    const minutesElement = document.getElementById('minutes');
+    const secondsElement = document.getElementById('seconds');
+    
+    function updateCountdown() {
+        const now = new Date();
+        const timeDifference = targetDate - now;
+        
+        if (timeDifference <= 0) {
+            // Exam time has passed
+            daysElement.textContent = '0';
+            hoursElement.textContent = '0';
+            minutesElement.textContent = '0';
+            secondsElement.textContent = '0';
+            return;
+        }
+        
+        // Calculate time units
+        const days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeDifference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+        
+        // Update display
+        daysElement.textContent = days;
+        hoursElement.textContent = hours.toString().padStart(2, '0');
+        minutesElement.textContent = minutes.toString().padStart(2, '0');
+        secondsElement.textContent = seconds.toString().padStart(2, '0');
+    }
+    
+    // Update immediately and then every second
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+
+// Initialize countdown timer when DOM is ready
+document.addEventListener('DOMContentLoaded', initCountdownTimer);

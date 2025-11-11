@@ -194,6 +194,13 @@ body {
     align-items: center;
     gap: 0.5rem;
     animation: bounce 2s infinite;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.scroll-indicator.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .mouse {
@@ -277,8 +284,8 @@ body {
 /* Dropdown Menu Styles */
 .dropdown-menu {
     cursor: pointer;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 .dropdown-menu summary {
@@ -323,6 +330,69 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* Countdown Timer Styles */
+.countdown-timer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.countdown-label {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 70px;
+}
+
+.countdown-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 10px rgba(100, 200, 255, 0.5);
+}
+
+.countdown-label-small {
+    font-size: 0.9rem;
+    color: #b0b8c0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile Responsive for Countdown */
+@media (max-width: 768px) {
+    .countdown-display {
+        gap: 1rem;
+    }
+    
+    .countdown-item {
+        min-width: 60px;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    .countdown-label-small {
+        font-size: 0.8rem;
     }
 }
 
